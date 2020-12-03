@@ -13,7 +13,6 @@ print(instagram_basic_display.get_login_url()) # Returns login URL you need to f
 app = Flask(__name__)
 @app.route('/')
 def redirect_url():
-    breakpoint()
     # Get the OAuth callback code
     code = request.args.get('code')
 
