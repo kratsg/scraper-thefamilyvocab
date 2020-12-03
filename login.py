@@ -25,7 +25,7 @@ def redirect_url():
     # Exchange this token for a long lived token (valid for 60 days)
     long_lived_token = instagram_basic_display.get_long_lived_token(short_lived_token.get('access_token'))
 
-    output = f"Your token is: {long_lived_token.get('access_token')}"
+    output = f"export IG_ACCESS_TOKEN='{long_lived_token.get('access_token')}'"
     print(output)
     return output
 
